@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,36 +18,7 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'serif': ['Crimson Text', 'serif'],
-				'sans': ['Inter', 'sans-serif'],
-			},
 			colors: {
-				// New neutral palette inspired by the reference
-				'cream': {
-					50: '#fefdf9',
-					100: '#fdf9f0',
-					200: '#faf4e6',
-					300: '#f5ebdc',
-					400: '#ede0cd',
-					500: '#e4d4be',
-					600: '#d4c0a8',
-					700: '#c0a691',
-					800: '#a08573',
-					900: '#7a6355',
-				},
-				'stone': {
-					50: '#fafaf9',
-					100: '#f5f5f4',
-					200: '#e7e5e4',
-					300: '#d6d3d1',
-					400: '#a8a29e',
-					500: '#78716c',
-					600: '#57534e',
-					700: '#44403c',
-					800: '#292524',
-					900: '#1c1917',
-				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -114,22 +84,11 @@ export default {
 					to: {
 						height: '0'
 					}
-				},
-				'fade-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(20px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},

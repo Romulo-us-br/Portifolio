@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -11,116 +10,66 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-cream-50">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Column - Text Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-6">
-              <p className="text-stone-600 font-sans text-lg tracking-wider uppercase">
-                I ALWAYS STRIVE FOR
-              </p>
-              
-              <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-stone-900 leading-none italic">
-                EXCELLENCE
-              </h1>
-              
-              <div className="w-24 h-0.5 bg-stone-900"></div>
-              
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-700 italic">
-                {"<RomuloBrasil/>"}
-              </h2>
-            </div>
-
-            {/* Three columns of attributes */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 bg-stone-900 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 bg-cream-100 rounded-full"></div>
-                </div>
-                <h3 className="font-sans text-sm font-semibold text-stone-900 mb-2">Responsável</h3>
-                <p className="font-sans text-xs text-stone-600 leading-relaxed">
-                  Sempre disposto a assumir responsabilidades quando necessário.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 bg-stone-900 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 bg-cream-100 rounded-full"></div>
-                </div>
-                <h3 className="font-sans text-sm font-semibold text-stone-900 mb-2">Produtivo</h3>
-                <p className="font-sans text-xs text-stone-600 leading-relaxed">
-                  Sou um indivíduo orientado por objetivos que busca padrões e trabalha para alcançá-los.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 bg-stone-900 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 bg-cream-100 rounded-full"></div>
-                </div>
-                <h3 className="font-sans text-sm font-semibold text-stone-900 mb-2">Talentoso</h3>
-                <p className="font-sans text-xs text-stone-600 leading-relaxed">
-                  Sou um team player que tem orgulho em ajudar colegas e amigos.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={() => scrollToSection('projects')}
-                className="bg-stone-900 hover:bg-stone-800 text-cream-50 px-8 py-3 font-sans text-sm font-medium tracking-wide"
-              >
-                VER PROJETOS
-              </Button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                variant="outline" 
-                className="border-stone-900 text-stone-900 hover:bg-stone-50 px-8 py-3 font-sans text-sm font-medium tracking-wide"
-              >
-                CONTATO
-              </Button>
-            </div>
-          </div>
-
-          {/* Right Column - Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="w-80 h-80 bg-stone-200 rounded-full overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-stone-300 to-stone-400 flex items-center justify-center">
-                  <span className="text-6xl">👨‍💻</span>
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 border border-stone-400 rounded-full"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-stone-900 rounded-full"></div>
-            </div>
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
+      <div className="text-center max-w-4xl mx-auto">
+        <div className="mb-8 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-amber-200 to-coral-300 bg-clip-text text-transparent">            {"<RomuloBrasil/>"}
+          </h1>
+          <div className="text-xl md:text-2xl text-amber-100 mb-8">
+            <span className="bg-gradient-to-r from-amber-400 to-coral-500 bg-clip-text text-transparent font-semibold">
+              Frontend Developer
+            </span>
+            <span className="mx-4 text-amber-500">•</span>
+            <span className="bg-gradient-to-r from-coral-400 to-amber-500 bg-clip-text text-transparent font-semibold">
+              Prompt Engineer
+            </span>
           </div>
         </div>
 
-        {/* Bottom section */}
-        <div className="mt-20 text-center space-y-8">
-          <div className="space-y-4">
-            <p className="font-sans text-stone-600 text-lg tracking-wider uppercase">
-              TAKE A LOOK AT
-            </p>
-            <h3 className="font-serif text-4xl md:text-5xl text-stone-900 italic">
-              MY PORTFOLIO
-            </h3>
-            <p className="font-serif text-4xl md:text-5xl text-stone-900 italic">
-              PROJECTS
-            </p>
-            <div className="w-24 h-0.5 bg-stone-900 mx-auto"></div>
-          </div>
+        <p className="text-lg md:text-xl text-amber-200/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in">
+          Criando experiências digitais excepcionais através de código elegante e 
+          otimizando o potencial da inteligência artificial com engenharia de prompts avançada.
+        </p>
 
-          <button
-            onClick={() => scrollToSection('about')}
-            className="animate-bounce hover:text-stone-900 transition-colors duration-300"
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
+          <Button 
+            onClick={() => scrollToSection('projects')}
+            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
           >
-            <ArrowDown className="w-6 h-6 text-stone-600" />
-          </button>
+            Ver Projetos
+          </Button>
+          <Button 
+            onClick={() => scrollToSection('contact')}
+            variant="outline" 
+            className="border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            Entre em Contato
+          </Button>
         </div>
+
+        <div className="flex justify-center space-x-6 mb-12">
+          {[
+            { icon: Github, href: "#", label: "GitHub" },
+            { icon: Linkedin, href: "#", label: "LinkedIn" },
+            { icon: Mail, href: "romulop.brasil25@gmail.com", label: "Email" }
+          ].map((social, index) => (
+            <a
+              key={index}
+              href={social.href}
+              className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 hover:scale-110 group"
+              aria-label={social.label}
+            >
+              <social.icon className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors duration-300" />
+            </a>
+          ))}
+        </div>
+
+        <button
+          onClick={() => scrollToSection('about')}
+          className="animate-bounce"
+        >
+          <ArrowDown className="w-8 h-8 text-slate-500 hover:text-white transition-colors duration-300" />
+        </button>
       </div>
     </section>
   );
