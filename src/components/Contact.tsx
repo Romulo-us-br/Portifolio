@@ -170,7 +170,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-slate-700/50 text-center">
           <p className="text-slate-400">
-            © 2024 {"<RomuloBrasil/>"}.  Desenvolvido com 💜 usando React e Tailwind CSS.
+            © 2025 Romulo Brasil.  Desenvolvido usando React e Tailwind CSS.
           </p>
         </div>
       </div>
