@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Send, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -63,30 +62,29 @@ const Contact = () => {
             Entre em Contato Comigo
           </h2>
           <div className="w-24 h-1 bg-warm-600 mx-auto mb-6"></div>
-          <p className="text-lg text-sage-600 max-w-2xl mx-auto font-inter">
-            Tem um projeto em mente? Vamos transformar suas ideias em realidade digital.
-          </p>
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {contactInfo.map((info, index) => (
-            <div
-              key={index}
-              className="text-center p-6 bg-cream-100 rounded-lg border border-sage-200 hover:border-sage-300 transition-all duration-300 hover:scale-105"
-            >
-              <div className="w-16 h-16 bg-warm-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <info.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-sage-900 font-semibold mb-2 font-crimson text-lg">{info.title}</h3>
-              <a
-                href={info.href}
-                className="text-sage-600 font-inter hover:text-warm-600 transition-colors"
+        <div className="max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {contactInfo.map((info, index) => (
+              <div
+                key={index}
+                className="text-center p-4 bg-cream-100 rounded-lg border border-sage-200 hover:border-sage-300 transition-all duration-300 hover:scale-105"
               >
-                {info.content}
-              </a>
-            </div>
-          ))}
+                <div className="w-12 h-12 bg-warm-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <info.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-sage-900 font-semibold mb-1 font-crimson text-base">{info.title}</h3>
+                <a
+                  href={info.href}
+                  className="text-sage-600 font-inter hover:text-warm-600 transition-colors text-sm"
+                >
+                  {info.content}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Contact Form */}

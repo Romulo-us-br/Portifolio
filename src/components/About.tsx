@@ -1,5 +1,5 @@
-
 import { Code, Brain, Coffee, Zap } from "lucide-react";
+import perfilImg from "../img/perfil.jpg";
 
 const About = () => {
   const highlights = [
@@ -61,8 +61,12 @@ const About = () => {
           </div>
           
           <div className="relative">
-            <div className="w-80 h-80 mx-auto bg-cream-100 rounded-full flex items-center justify-center backdrop-blur-sm border border-sage-200">
-              <div className="text-6xl">👨‍💻</div>
+            <div className="w-80 h-80 mx-auto overflow-hidden bg-cream-100 rounded-full flex items-center justify-center backdrop-blur-sm border border-sage-200">
+              <img 
+                src={perfilImg} 
+                alt="Romulo Brasil" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

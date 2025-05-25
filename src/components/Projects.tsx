@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Zap, Brain, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,7 +15,7 @@ const Projects = () => {
     },
     {
       title: "E-commerce Dashboard",
-      description: "Dashboard completo para gerenciamento de e-commerce com analytics em tempo real e interface intuitiva.",
+      description: "Dashboard para e-commerce com analytics em tempo real e interface intuitiva.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
       technologies: ["Next.js", "React", "Chart.js", "Node.js"],
       liveUrl: "#",
@@ -82,11 +81,11 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-4 flex-grow">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-sage-100 text-sage-700 text-xs rounded-md border border-sage-200 font-inter"
+                      className="h-7 inline-flex items-center px-3 bg-sage-100 text-sage-700 text-xs rounded-md border border-sage-200 font-inter whitespace-nowrap"
                     >
                       {tech}
                     </span>
