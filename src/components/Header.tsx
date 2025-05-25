@@ -17,7 +17,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Modified Logo */}
-          <div className="flex items-center justify-center w-10 h-10 bg-stone-900 rounded-full hover:bg-stone-700 transition-colors duration-300">
+          <div className="flex items-center justify-center w-10 h-10 bg-stone-700 rounded-full hover:bg-stone-600 transition-colors duration-300">
             <span className="text-white font-medium text-lg">RB</span>
           </div>
 
@@ -26,7 +26,6 @@ const Header = () => {
             {[
               { label: "Início", id: "hero" },
               { label: "Sobre", id: "about" },
-              { label: "Habilidades", id: "skills" },
               { label: "Projetos", id: "projects" },
               { label: "Contato", id: "contact" }
             ].map((item) => (
