@@ -51,7 +51,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl border border-sage-200 bg-cream-100 backdrop-blur-sm hover:border-sage-300 transition-all duration-300 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-xl border border-sage-200 bg-cream-100 backdrop-blur-sm hover:border-sage-300 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -74,15 +74,16 @@ const Projects = () => {
                 )}
               </div>
 
-              <div className="p-4">
+              <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-lg font-bold text-sage-900 mb-2 group-hover:text-warm-700 transition-colors duration-300 font-crimson">
                   {project.title}
                 </h3>
-                <p className="text-sage-600 text-sm leading-relaxed mb-3 font-inter line-clamp-2">
+                <p className="text-sage-600 text-sm leading-relaxed mb-4 font-inter">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                
+                <div className="flex flex-wrap gap-1 mb-4 flex-grow">
+                  {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-sage-100 text-sage-700 text-xs rounded-full border border-sage-200 font-inter"
@@ -90,14 +91,9 @@ const Projects = () => {
                       {tech}
                     </span>
                   ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-sage-100 text-sage-700 text-xs rounded-full border border-sage-200 font-inter">
-                      +{project.technologies.length - 3}
-                    </span>
-                  )}
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 mt-auto">
                   <Button
                     asChild
                     size="sm"
