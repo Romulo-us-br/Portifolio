@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Send, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -55,14 +56,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-slate-900/50">
+    <section id="contact" className="py-20 px-6 bg-warm-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sage-900 font-crimson italic">
             Vamos Conversar
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-warm-600 mx-auto mb-8"></div>
+          <p className="text-xl text-sage-600 max-w-2xl mx-auto font-inter">
             Tem um projeto em mente? Vamos transformar suas ideias em realidade digital.
           </p>
         </div>
@@ -71,8 +72,8 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Entre em Contato</h3>
-              <p className="text-slate-400 text-lg leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-sage-900 mb-6 font-crimson">Entre em Contato</h3>
+              <p className="text-sage-600 text-lg leading-relaxed mb-8 font-inter">
                 Estou sempre aberto a discutir novos projetos, oportunidades criativas 
                 ou parcerias interessantes. Vamos criar algo incrível juntos!
               </p>
@@ -83,22 +84,22 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.href}
-                  className="flex items-center p-4 bg-slate-800/30 rounded-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm group"
+                  className="flex items-center p-4 bg-cream-100 rounded-xl border border-sage-200 hover:border-sage-300 transition-all duration-300 hover:scale-105 backdrop-blur-sm group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-warm-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-1">{info.title}</h4>
-                    <p className="text-slate-400">{info.content}</p>
+                    <h4 className="text-sage-900 font-semibold mb-1 font-crimson">{info.title}</h4>
+                    <p className="text-sage-600 font-inter">{info.content}</p>
                   </div>
                 </a>
               ))}
             </div>
 
-            <div className="p-6 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-xl border border-slate-700/50 backdrop-blur-sm">
-              <h4 className="text-white font-bold mb-2">💡 Dica</h4>
-              <p className="text-slate-400">
+            <div className="p-6 bg-warm-100 rounded-xl border border-sage-200 backdrop-blur-sm">
+              <h4 className="text-sage-900 font-bold mb-2 font-crimson">💡 Dica</h4>
+              <p className="text-sage-600 font-inter">
                 Descreva seu projeto com detalhes para que eu possa entender melhor 
                 suas necessidades e oferecer a melhor solução.
               </p>
@@ -106,10 +107,10 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-slate-800/30 rounded-2xl border border-slate-700/50 p-8 backdrop-blur-sm">
+          <div className="bg-cream-100 rounded-2xl border border-sage-200 p-8 backdrop-blur-sm">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+                <label htmlFor="name" className="block text-sage-900 font-medium mb-2 font-inter">
                   Nome
                 </label>
                 <Input
@@ -119,13 +120,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Seu nome completo"
-                  className="bg-slate-700/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500"
+                  className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 font-inter"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+                <label htmlFor="email" className="block text-sage-900 font-medium mb-2 font-inter">
                   Email
                 </label>
                 <Input
@@ -135,13 +136,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="seu@email.com"
-                  className="bg-slate-700/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500"
+                  className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 font-inter"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+                <label htmlFor="message" className="block text-sage-900 font-medium mb-2 font-inter">
                   Mensagem
                 </label>
                 <Textarea
@@ -151,14 +152,14 @@ const Contact = () => {
                   onChange={handleInputChange}
                   placeholder="Conte-me sobre seu projeto..."
                   rows={5}
-                  className="bg-slate-700/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500 resize-none"
+                  className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 resize-none font-inter"
                   required
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 transition-all duration-300 hover:scale-105"
+                className="w-full bg-warm-600 hover:bg-warm-700 text-white py-3 transition-all duration-300 hover:scale-105 font-inter font-medium"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Enviar Mensagem
@@ -168,9 +169,9 @@ const Contact = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-slate-700/50 text-center">
-          <p className="text-slate-400">
-            © 2025 Romulo Brasil.  Desenvolvido usando React e Tailwind CSS.
+        <div className="mt-20 pt-8 border-t border-sage-200 text-center">
+          <p className="text-sage-500 font-inter">
+            © 2025 Romulo Brasil. Desenvolvido usando React e Tailwind CSS.
           </p>
         </div>
       </div>

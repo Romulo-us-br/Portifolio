@@ -14,10 +14,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-sm border-b border-slate-700/50">
+    <header className="fixed top-0 w-full z-50 bg-cream-50/90 backdrop-blur-sm border-b border-sage-200">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold font-crimson text-sage-800">
             RB
           </div>
 
@@ -26,17 +26,16 @@ const Header = () => {
             {[
               { label: "Início", id: "hero" },
               { label: "Sobre", id: "about" },
-              { label: "Habilidades", id: "skills" },
               { label: "Projetos", id: "projects" },
               { label: "Contato", id: "contact" }
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-slate-300 hover:text-white transition-colors duration-300 relative group"
+                className="text-sage-700 hover:text-sage-900 transition-colors duration-300 relative group font-inter font-medium"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-warm-600 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </nav>
@@ -44,7 +43,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white"
+            className="md:hidden text-sage-800"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -52,19 +51,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-slate-700/50 pt-4">
+          <nav className="md:hidden mt-4 pb-4 border-t border-sage-200 pt-4">
             <div className="flex flex-col space-y-3">
               {[
                 { label: "Início", id: "hero" },
                 { label: "Sobre", id: "about" },
-                { label: "Habilidades", id: "skills" },
                 { label: "Projetos", id: "projects" },
                 { label: "Contato", id: "contact" }
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-300 hover:text-white transition-colors duration-300 text-left"
+                  className="text-sage-700 hover:text-sage-900 transition-colors duration-300 text-left font-inter font-medium"
                 >
                   {item.label}
                 </button>

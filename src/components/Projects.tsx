@@ -35,14 +35,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-20 px-6 bg-cream-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sage-900 font-crimson italic">
             Projetos
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-warm-600 mx-auto mb-8"></div>
+          <p className="text-xl text-sage-600 max-w-2xl mx-auto font-inter">
             Uma seleção dos meus trabalhos mais recentes e impactantes
           </p>
         </div>
@@ -51,7 +51,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:border-slate-600/50 transition-all duration-500 ${
+              className={`group relative overflow-hidden rounded-2xl border border-sage-200 bg-cream-100 backdrop-blur-sm hover:border-sage-300 transition-all duration-500 ${
                 project.featured ? 'lg:grid-cols-2' : ''
               }`}
             >
@@ -62,15 +62,15 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-64 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-sage-900/80 to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-warm-600 rounded-lg flex items-center justify-center">
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   {project.featured && (
                     <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm rounded-full font-medium">
+                      <span className="px-3 py-1 bg-warm-600 text-white text-sm rounded-full font-medium font-inter">
                         Destaque
                       </span>
                     </div>
@@ -79,17 +79,17 @@ const Projects = () => {
 
                 <div className="p-6 md:p-8 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                    <h3 className="text-2xl md:text-3xl font-bold text-sage-900 mb-4 group-hover:text-warm-700 transition-colors duration-300 font-crimson">
                       {project.title}
                     </h3>
-                    <p className="text-slate-400 text-lg leading-relaxed mb-6">
+                    <p className="text-sage-600 text-lg leading-relaxed mb-6 font-inter">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full border border-slate-600/50"
+                          className="px-3 py-1 bg-sage-100 text-sage-700 text-sm rounded-full border border-sage-200 font-inter"
                         >
                           {tech}
                         </span>
@@ -100,7 +100,7 @@ const Projects = () => {
                   <div className="flex gap-4">
                     <Button
                       asChild
-                      className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white flex-1 transition-all duration-300 hover:scale-105"
+                      className="bg-warm-600 hover:bg-warm-700 text-white flex-1 transition-all duration-300 hover:scale-105 font-inter font-medium"
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
@@ -110,7 +110,7 @@ const Projects = () => {
                     <Button
                       asChild
                       variant="outline"
-                      className="border-slate-600 text-slate-300 hover:bg-slate-700 transition-all duration-300 hover:scale-105"
+                      className="border-sage-400 text-sage-700 hover:bg-sage-100 transition-all duration-300 hover:scale-105 font-inter font-medium"
                     >
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4" />
@@ -127,7 +127,7 @@ const Projects = () => {
           <Button
             asChild
             variant="outline"
-            className="border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-3 transition-all duration-300 hover:scale-105"
+            className="border-sage-400 text-sage-700 hover:bg-sage-100 px-8 py-3 transition-all duration-300 hover:scale-105 font-inter font-medium"
           >
             <a href="#" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
