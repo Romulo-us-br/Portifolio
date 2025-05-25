@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Send, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -55,14 +56,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-teal-900/50">
+    <section id="contact" className="py-20 px-6 bg-slate-900/50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-100 to-coral-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
             Vamos Conversar
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-coral-600 mx-auto mb-8"></div>
-          <p className="text-xl text-amber-200/80 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Tem um projeto em mente? Vamos transformar suas ideias em realidade digital.
           </p>
         </div>
@@ -71,8 +72,8 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-amber-100 mb-6">Entre em Contato</h3>
-              <p className="text-amber-200/80 text-lg leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Entre em Contato</h3>
+              <p className="text-slate-400 text-lg leading-relaxed mb-8">
                 Estou sempre aberto a discutir novos projetos, oportunidades criativas 
                 ou parcerias interessantes. Vamos criar algo incrível juntos!
               </p>
