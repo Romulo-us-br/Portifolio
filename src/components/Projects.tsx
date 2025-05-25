@@ -67,7 +67,7 @@ const Projects = () => {
                 </div>
                 {project.featured && (
                   <div className="absolute top-3 right-3">
-                    <span className="px-2 py-1 bg-warm-600 text-white text-xs rounded-full font-medium font-inter">
+                    <span className="px-3 py-1 bg-warm-600 text-white text-xs rounded-md font-medium font-inter">
                       Destaque
                     </span>
                   </div>
@@ -82,11 +82,11 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-1 mb-4 flex-grow">
+                <div className="flex flex-wrap gap-2 mb-4 flex-grow">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-sage-100 text-sage-700 text-xs rounded-full border border-sage-200 font-inter"
+                      className="px-3 py-1 bg-sage-100 text-sage-700 text-xs rounded-md border border-sage-200 font-inter"
                     >
                       {tech}
                     </span>

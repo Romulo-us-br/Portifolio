@@ -57,10 +57,10 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-12 px-6 bg-warm-50">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sage-900 font-crimson italic">
-            Vamos Conversar
+            Entre em Contato Comigo
           </h2>
           <div className="w-24 h-1 bg-warm-600 mx-auto mb-6"></div>
           <p className="text-lg text-sage-600 max-w-2xl mx-auto font-inter">
@@ -68,31 +68,31 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Contact Information */}
-          <div>
-            <div className="grid gap-4 mb-6">
-              {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.href}
-                  className="flex items-center p-3 bg-cream-100 rounded-lg border border-sage-200 hover:border-sage-300 transition-all duration-300 hover:scale-105 backdrop-blur-sm group"
-                >
-                  <div className="w-10 h-10 bg-warm-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
-                    <info.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-sage-900 font-semibold mb-1 font-crimson text-sm">{info.title}</h4>
-                    <p className="text-sage-600 font-inter text-sm">{info.content}</p>
-                  </div>
-                </a>
-              ))}
+        {/* Contact Info Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {contactInfo.map((info, index) => (
+            <div
+              key={index}
+              className="text-center p-6 bg-cream-100 rounded-lg border border-sage-200 hover:border-sage-300 transition-all duration-300 hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-warm-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <info.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-sage-900 font-semibold mb-2 font-crimson text-lg">{info.title}</h3>
+              <a
+                href={info.href}
+                className="text-sage-600 font-inter hover:text-warm-600 transition-colors"
+              >
+                {info.content}
+              </a>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Contact Form */}
-          <div className="bg-cream-100 rounded-xl border border-sage-200 p-6 backdrop-blur-sm">
-            <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Contact Form */}
+        <div className="bg-cream-100 rounded-xl border border-sage-200 p-8 max-w-2xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <Input
                   id="name"
@@ -105,7 +105,6 @@ const Contact = () => {
                   required
                 />
               </div>
-
               <div>
                 <Input
                   id="email"
@@ -118,36 +117,29 @@ const Contact = () => {
                   required
                 />
               </div>
+            </div>
 
-              <div>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Conte-me sobre seu projeto..."
-                  rows={4}
-                  className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 resize-none font-inter"
-                  required
-                />
-              </div>
+            <div>
+              <Textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Conte-me sobre seu projeto..."
+                rows={5}
+                className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 resize-none font-inter"
+                required
+              />
+            </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-warm-600 hover:bg-warm-700 text-white py-2 transition-all duration-300 hover:scale-105 font-inter font-medium"
-              >
-                <Send className="w-4 h-4 mr-2" />
-                Enviar Mensagem
-              </Button>
-            </form>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-12 pt-6 border-t border-sage-200 text-center">
-          <p className="text-sage-500 font-inter">
-            © 2025 Romulo Brasil. Desenvolvido usando React e Tailwind CSS.
-          </p>
+            <Button
+              type="submit"
+              className="w-full bg-warm-600 hover:bg-warm-700 text-white py-3 transition-all duration-300 hover:scale-105 font-inter font-medium text-lg"
+            >
+              <Send className="w-5 h-5 mr-2" />
+              Enviar Mensagem
+            </Button>
+          </form>
         </div>
       </div>
     </section>
