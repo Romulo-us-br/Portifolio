@@ -1,3 +1,4 @@
+
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -13,21 +14,21 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="text-center max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-amber-200 to-coral-300 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent">
             Rômulo Brasil
           </h1>
-          <div className="text-xl md:text-2xl text-amber-100 mb-8">
-            <span className="bg-gradient-to-r from-amber-400 to-coral-500 bg-clip-text text-transparent font-semibold">
+          <div className="text-xl md:text-2xl text-slate-300 mb-8">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-semibold">
               Frontend Developer
             </span>
-            <span className="mx-4 text-amber-500">•</span>
-            <span className="bg-gradient-to-r from-coral-400 to-amber-500 bg-clip-text text-transparent font-semibold">
+            <span className="mx-4 text-slate-500">•</span>
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent font-semibold">
               Prompt Engineer
             </span>
           </div>
         </div>
 
-        <p className="text-lg md:text-xl text-amber-200/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in">
+        <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in">
           Criando experiências digitais excepcionais através de código elegante e 
           otimizando o potencial da inteligência artificial com engenharia de prompts avançada.
         </p>
