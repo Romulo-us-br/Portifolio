@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -14,11 +13,12 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-cream-50/90 backdrop-blur-sm border-b border-sage-200">
+    <header className="fixed top-0 w-full z-50 bg-cream-50/95 backdrop-blur-sm border-b border-stone-200">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold font-crimson text-sage-800">
-            RB
+          {/* Modified Logo */}
+          <div className="flex items-center justify-center w-10 h-10 bg-stone-900 rounded-full hover:bg-stone-700 transition-colors duration-300">
+            <span className="text-white font-medium text-lg">RB</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -26,16 +26,17 @@ const Header = () => {
             {[
               { label: "Início", id: "hero" },
               { label: "Sobre", id: "about" },
+              { label: "Habilidades", id: "skills" },
               { label: "Projetos", id: "projects" },
               { label: "Contato", id: "contact" }
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sage-700 hover:text-sage-900 transition-colors duration-300 relative group font-inter font-medium"
+                className="font-sans text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors duration-300 relative group tracking-wide"
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-warm-600 group-hover:w-full transition-all duration-300"></span>
+                {item.label.toUpperCase()}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-stone-900 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </nav>
@@ -43,7 +44,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-sage-800"
+            className="md:hidden text-stone-900"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
