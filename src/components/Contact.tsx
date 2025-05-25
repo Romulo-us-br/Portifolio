@@ -37,8 +37,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "romulo.brasil@email.com",
-      href: "mailto:romulo.brasil@email.com"
+      content: "romulop.brasil25@gmail.com",
+      href: "mailto:romulop.brasil25@gmail.com"
     },
     {
       icon: Phone,
@@ -170,7 +170,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-slate-700/50 text-center">
           <p className="text-slate-400">
-            © 2024 Rômulo Brasil. Desenvolvido com 💜 usando React e Tailwind CSS.
+            © 2024 {"<\"RomuloBrasil\"/>"}.  Desenvolvido com 💜 usando React e Tailwind CSS.
           </p>
         </div>
       </div>
