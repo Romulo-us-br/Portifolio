@@ -12,23 +12,25 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const navigationItems = [
+    { label: "Início", id: "hero" },
+    { label: "Sobre", id: "about" },
+    { label: "Projetos", id: "projects" },
+    { label: "Contato", id: "contact" }
+  ];
+
   return (
     <header className="fixed top-0 w-full z-50 bg-cream-50/95 backdrop-blur-sm border-b border-stone-200">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Modified Logo */}
+          {/* Logo */}
           <div className="flex items-center justify-center px-4 py-2 transition-colors duration-300">
             <span className="text-stone-700 hover:text-stone-900 font-medium text-lg">@romulobrasil</span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {[
-              { label: "Início", id: "hero" },
-              { label: "Sobre", id: "about" },
-              { label: "Projetos", id: "projects" },
-              { label: "Contato", id: "contact" }
-            ].map((item) => (
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -53,12 +55,7 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-sage-200 pt-4">
             <div className="flex flex-col space-y-3">
-              {[
-                { label: "Início", id: "hero" },
-                { label: "Sobre", id: "about" },
-                { label: "Projetos", id: "projects" },
-                { label: "Contato", id: "contact" }
-              ].map((item) => (
+              {navigationItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}

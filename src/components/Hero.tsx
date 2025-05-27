@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="text-center max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
             <TypeAnimation
-           sequence={["<RomuloBrsil/>"]} 
+           sequence={["<RomuloBrasil/>"]} 
            wrapper="h1"
            speed={20}
            cursor={false}

@@ -1,5 +1,5 @@
 import { Code, Brain, Coffee, Zap } from "lucide-react";
-import perfilImg from "../img/perfil 2.jpg";
+import perfilImg from "/public/perfil 2.jpg";
 
 const About = () => {
   const highlights = [
