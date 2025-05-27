@@ -1,6 +1,6 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -14,11 +14,15 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-cream-50">
       <div className="text-center max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-sage-900 font-crimson italic">
-            {"<RomuloBrasil/>"}
-          </h1>
+            <TypeAnimation
+           sequence={["<RomuloBrasil/>"]} 
+           wrapper="h1"
+           speed={20}
+           cursor={false}
+           className="text-5xl md:text-7xl font-bold mb-6 text-sage-900 font-crimson italic"
+            />
           <div className="text-xl md:text-2xl text-sage-700 mb-8 font-inter">
-            <span className="text-warm-700 font-semibold">
+          <span className="text-warm-700 font-semibold">
               Frontend Developer
             </span>
             <span className="mx-4 text-sage-400">•</span>
@@ -51,8 +55,8 @@ const Hero = () => {
 
         <div className="flex justify-center space-x-6 mb-12">
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
+            { icon: Github, href: "https://github.com/Romulo-us-br", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/romulo-brasil-a2121534b/", label: "LinkedIn" },
             { icon: Mail, href: "romulop.brasil25@gmail.com", label: "Email" }
           ].map((social, index) => (
             <a

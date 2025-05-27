@@ -125,7 +125,7 @@ const Projects = () => {
             variant="outline"
             className="border-sage-400 text-sage-700 hover:bg-sage-100 px-6 py-2 transition-all duration-300 hover:scale-105 font-inter font-medium"
           >
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Romulo-us-br" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
               Ver Mais no GitHub
             </a>

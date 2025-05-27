@@ -17,8 +17,8 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Modified Logo */}
-          <div className="flex items-center justify-center w-10 h-10 bg-stone-700 rounded-full hover:bg-stone-600 transition-colors duration-300">
-            <span className="text-white font-medium text-lg">RB</span>
+          <div className="flex items-center justify-center px-4 py-2 transition-colors duration-300">
+            <span className="text-stone-700 hover:text-stone-900 font-medium text-lg">@romulobrasil</span>
           </div>
 
           {/* Desktop Navigation */}

@@ -1,12 +1,12 @@
 import { Code, Brain, Coffee, Zap } from "lucide-react";
-import perfilImg from "../img/perfil.jpg";
+import perfilImg from "../img/perfil 2.jpg";
 
 const About = () => {
   const highlights = [
     {
       icon: Code,
       title: "Frontend Expert",
-      description: "Especialista em React, TypeScript e tecnologias modernas"
+      description: "Trabalho com React, TypeScript e estou sempre explorando tecnologias modernas."
     },
     {
       icon: Brain,
@@ -40,7 +40,7 @@ const About = () => {
             <p className="text-lg text-sage-700 leading-relaxed font-inter">
               Sou um desenvolvedor frontend apaixonado por criar experiências digitais 
               que fazem a diferença. Com expertise em React, TypeScript e as mais 
-              modernas tecnologias web, transformo ideias em realidade digital.
+              modernas tecnologias web.
             </p>
             <p className="text-lg text-sage-700 leading-relaxed font-inter">
               Como engenheiro de prompts, trabalho na fronteira da inovação, 
@@ -65,7 +65,7 @@ const About = () => {
               <img 
                 src={perfilImg} 
                 alt="Romulo Brasil" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[Center_70%]"
               />
             </div>
           </div>
