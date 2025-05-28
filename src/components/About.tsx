@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-modern-50">
+    <section id="about" className="py-20 px-6 bg-slate-100">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 font-crimson italic">
@@ -53,7 +53,7 @@ const About = () => {
               {["React", "TypeScript", "Next.js", "AI/ML", "Node.js", "Tailwind CSS"].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-slate-100 rounded-full text-sm text-slate-700 border border-slate-200 font-inter"
+                  className="px-4 py-2 bg-white rounded-full text-sm text-slate-700 border border-slate-300 font-inter"
                 >
                   {tech}
                 </span>
@@ -62,7 +62,7 @@ const About = () => {
           </div>
           
           <div className="relative">
-            <div className="w-80 h-80 mx-auto overflow-hidden bg-blue-100 rounded-full flex items-center justify-center backdrop-blur-sm border border-slate-200">
+            <div className="w-80 h-80 mx-auto overflow-hidden bg-white rounded-full flex items-center justify-center backdrop-blur-sm border border-slate-300">
               <img 
                 src={perfilImg} 
                 alt="Romulo Brasil" 
@@ -76,7 +76,7 @@ const About = () => {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="p-6 bg-blue-100 rounded-xl border border-slate-200 hover:border-slate-300 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+              className="p-6 bg-white rounded-xl border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
             >
               <div className="w-12 h-12 bg-modern-600 rounded-lg flex items-center justify-center mb-4">
                 <item.icon className="w-6 h-6 text-white" />
@@ -92,4 +92,3 @@ const About = () => {
 };
 
 export default About;
-
