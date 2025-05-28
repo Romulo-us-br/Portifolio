@@ -3,11 +3,7 @@ Meu Portfólio
 Bem-vindo ao meu portfólio! Este repositório contém o código do meu primeiro portfólio.
 
 Tecnologias Utilizadas
-HTML
-Tailwind
-TypeScript
-React
-Node
+| HTML | Tailwind | TypeScript | React | Node.js | 
 
 Funcionalidades a Serem Implementadas
 Sessão dedicada a projetos pessoais;
