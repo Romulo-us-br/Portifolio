@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Zap, Brain, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -35,7 +34,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 px-6 bg-blue-50">
+    <section id="projects" className="py-16 px-6 bg-blue-100">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 font-crimson italic">
@@ -138,4 +137,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

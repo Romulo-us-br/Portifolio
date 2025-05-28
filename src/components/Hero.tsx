@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TypeAnimation } from 'react-type-animation';
@@ -12,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-blue-50">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-blue-100">
       <div className="text-center max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
             <TypeAnimation
@@ -83,4 +82,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

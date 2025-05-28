@@ -1,4 +1,3 @@
-
 import { Code, Brain, Coffee, Zap } from "lucide-react";
 import perfilImg from "/public/perfil 2.jpg";
 
@@ -27,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-slate-100">
+    <section id="about" className="py-20 px-6 bg-slate-200">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 font-crimson italic">

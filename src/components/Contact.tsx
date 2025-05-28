@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -70,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-6 bg-blue-50">
+    <section id="contact" className="py-16 px-6 bg-slate-200">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 font-crimson italic">
