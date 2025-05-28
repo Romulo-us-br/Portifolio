@@ -11,6 +11,7 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,16 +22,50 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Formulário enviado:", formData);
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Retornarei em breve!",
-    });
+    setIsLoading(true);
 
-    setFormData({ name: "", email: "", message: "" });
+    const data = {
+      nome: formData.name,
+      email: formData.email,
+      texto: formData.message,
+    };
+    
+    console.log("Enviando dados para o backend:", data);
+
+    try {
+      const response = await fetch("http://localhost:3001/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      console.log("Resposta do backend:", response);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.details || "Erro ao enviar mensagem");
+      }
+
+      toast({
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato. Retornarei em breve!",
+      });
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Erro completo:", error);
+      toast({
+        title: "Erro!",
+        description: "Não foi possível enviar sua mensagem. Tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -57,6 +92,7 @@ const Contact = () => {
                   placeholder="Seu nome completo"
                   className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 font-inter"
                   required
+                  disabled={isLoading}
                 />
               </div>
               <div>
@@ -69,29 +105,36 @@ const Contact = () => {
                   placeholder="seu@email.com"
                   className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 font-inter"
                   required
+                  disabled={isLoading}
                 />
               </div>
             </div>
 
-            <div>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                placeholder="Conte-me sobre seu projeto..."
-                rows={5}
-                className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 resize-none font-inter"
-                required
-              />
-            </div>
+            <Textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Conte-me sobre seu projeto..."
+              rows={5}
+              className="bg-white border-sage-300 text-sage-900 placeholder-sage-500 focus:border-warm-600 resize-none font-inter"
+              required
+              disabled={isLoading}
+            />
 
             <Button
               type="submit"
               className="w-full bg-warm-600 hover:bg-warm-700 text-white py-3 transition-all duration-300 hover:scale-105 font-inter font-medium text-lg"
+              disabled={isLoading}
             >
-              <Send className="w-5 h-5 mr-2" />
-              Enviar Mensagem
+              {isLoading ? (
+                "Enviando..."
+              ) : (
+                <>
+                  <Send className="w-5 h-5 mr-2" />
+                  Enviar Mensagem
+                </>
+              )}
             </Button>
           </form>
         </div>
