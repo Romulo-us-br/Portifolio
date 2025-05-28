@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -7,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-cream-50 font-inter">
+    <div className="min-h-screen bg-blue-50 font-inter">
       <Header />
       <main>
         <Hero />
@@ -21,3 +22,4 @@ const Index = () => {
 };
 
 export default Index;
+

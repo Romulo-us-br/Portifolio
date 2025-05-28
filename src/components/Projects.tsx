@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github, Zap, Brain, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -34,14 +35,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 px-6 bg-cream-50">
+    <section id="projects" className="py-16 px-6 bg-blue-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sage-900 font-crimson italic">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 font-crimson italic">
             Projetos
           </h2>
-          <div className="w-24 h-1 bg-warm-600 mx-auto mb-8"></div>
-          <p className="text-xl text-sage-600 max-w-2xl mx-auto font-inter">
+          <div className="w-24 h-1 bg-modern-600 mx-auto mb-8"></div>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-inter">
             Uma seleção dos meus trabalhos mais recentes e impactantes
           </p>
         </div>
@@ -50,7 +51,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl border border-sage-200 bg-cream-100 backdrop-blur-sm hover:border-sage-300 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
+              className="group relative overflow-hidden rounded-xl border border-slate-200 bg-blue-100 backdrop-blur-sm hover:border-slate-300 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -58,15 +59,15 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sage-900/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                 <div className="absolute top-3 left-3">
-                  <div className="w-8 h-8 bg-warm-600 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-modern-600 rounded-lg flex items-center justify-center">
                     <project.icon className="w-4 h-4 text-white" />
                   </div>
                 </div>
                 {project.featured && (
                   <div className="absolute top-3 right-3">
-                    <span className="px-3 py-1 bg-warm-600 text-white text-xs rounded-md font-medium font-inter">
+                    <span className="px-3 py-1 bg-modern-600 text-white text-xs rounded-md font-medium font-inter">
                       Destaque
                     </span>
                   </div>
@@ -74,10 +75,10 @@ const Projects = () => {
               </div>
 
               <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold text-sage-900 mb-2 group-hover:text-warm-700 transition-colors duration-300 font-crimson">
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-modern-700 transition-colors duration-300 font-crimson">
                   {project.title}
                 </h3>
-                <p className="text-sage-600 text-sm leading-relaxed mb-4 font-inter">
+                <p className="text-slate-600 text-sm leading-relaxed mb-4 font-inter">
                   {project.description}
                 </p>
                 
@@ -85,7 +86,7 @@ const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="h-7 inline-flex items-center px-3 bg-sage-100 text-sage-700 text-xs rounded-md border border-sage-200 font-inter whitespace-nowrap"
+                      className="h-7 inline-flex items-center px-3 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-inter whitespace-nowrap"
                     >
                       {tech}
                     </span>
@@ -96,7 +97,7 @@ const Projects = () => {
                   <Button
                     asChild
                     size="sm"
-                    className="bg-warm-600 hover:bg-warm-700 text-white flex-1 transition-all duration-300 hover:scale-105 font-inter font-medium text-xs"
+                    className="bg-modern-600 hover:bg-modern-700 text-white flex-1 transition-all duration-300 hover:scale-105 font-inter font-medium text-xs"
                   >
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-3 h-3 mr-1" />
@@ -107,7 +108,7 @@ const Projects = () => {
                     asChild
                     variant="outline"
                     size="sm"
-                    className="border-sage-400 text-sage-700 hover:bg-sage-100 transition-all duration-300 hover:scale-105 font-inter font-medium"
+                    className="border-slate-400 text-slate-700 hover:bg-slate-100 transition-all duration-300 hover:scale-105 font-inter font-medium"
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="w-3 h-3" />
@@ -123,7 +124,7 @@ const Projects = () => {
           <Button
             asChild
             variant="outline"
-            className="border-sage-400 text-sage-700 hover:bg-sage-100 px-6 py-2 transition-all duration-300 hover:scale-105 font-inter font-medium"
+            className="border-slate-400 text-slate-700 hover:bg-slate-100 px-6 py-2 transition-all duration-300 hover:scale-105 font-inter font-medium"
           >
             <a href="https://github.com/Romulo-us-br" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
@@ -137,3 +138,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
