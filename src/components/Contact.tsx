@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,29 +27,18 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const data = {
-      nome: formData.name,
-      email: formData.email,
-      texto: formData.message,
-    };
-    
-    console.log("Enviando dados para o backend:", data);
-
     try {
-      const response = await fetch("http://localhost:3001/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const { error } = await supabase
+        .from('contacts')
+        .insert([
+          {
+            nome: formData.name,
+            email: formData.email,
+            texto: formData.message,
+          }
+        ]);
 
-      console.log("Resposta do backend:", response);
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.details || "Erro ao enviar mensagem");
-      }
+      if (error) throw error;
 
       toast({
         title: "Mensagem enviada!",
@@ -57,7 +47,7 @@ const Contact = () => {
 
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Erro completo:", error);
+      console.error("Erro ao enviar mensagem:", error);
       toast({
         title: "Erro!",
         description: "Não foi possível enviar sua mensagem. Tente novamente mais tarde.",
